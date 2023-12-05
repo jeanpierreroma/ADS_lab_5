@@ -34,7 +34,7 @@ namespace ADS_lab_5
                 SaveSignIntoFile(hexSign);
 
                 // Витягуємо наш підпис
-                Console.WriteLine("\n\nEnter file name, in which sign!");
+                Console.WriteLine("\n\nEnter file name, in which sign for verification!");
                 string fileName = Console.ReadLine();
                 byte[] byteSign = ReadBytesFromFile(fileName);
 
@@ -145,7 +145,7 @@ namespace ADS_lab_5
         
         static void WriteTextIntoFile(string sign, string fileName)
         {
-            string filePath = DefaultRoutePlainTextFile + fileName;
+            string filePath = DefaultRouteSignFile + fileName;
 
             try
             {
@@ -165,7 +165,7 @@ namespace ADS_lab_5
         {
             string fileData = string.Empty;
 
-            string filePath = DefaultRoutePlainTextFile + fileName;
+            string filePath = DefaultRouteSignFile + fileName;
 
             try
             {
